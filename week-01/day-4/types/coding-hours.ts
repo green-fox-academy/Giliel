@@ -1,4 +1,7 @@
 'use strict';
 
-console.log('Hours is spent with coding: ' + (6 * 17 * 5));
-console.log('The percentage of coding hours: ' + (17 * 168 / 52));
+let codingHours: number = 6 * 17 * 5;
+console.log('Hours is spent with coding: ' + codingHours);
+
+let codingHoursPercent: number = 17 * 168 / 52;
+console.log('The percentage of coding hours: ' + codingHoursPercent);
