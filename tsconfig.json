@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["node"],
+//    "types": ["node"],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "target": "esnext",
