@@ -7,11 +7,11 @@ const ctx = canvas.getContext('2d');
 
 // draw a box that has different colored lines on each edge.
 function drawLine(color, moveToX, moveToY, lineToX, lineToY) {
-ctx.strokeStyle = color;
-ctx.beginPath();
-ctx.moveTo(moveToX, moveToY);
-ctx.lineTo(lineToX, lineToY);
-ctx.stroke();
+  ctx.strokeStyle = color;
+  ctx.beginPath();
+  ctx.moveTo(moveToX, moveToY);
+  ctx.lineTo(lineToX, lineToY);
+  ctx.stroke();
 }
 
 function drawMultiColorBox(color1, color2, color3, color4, startX, startY, width) {

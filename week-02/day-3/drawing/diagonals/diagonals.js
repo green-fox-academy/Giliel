@@ -13,15 +13,15 @@ for (let i = 0; i <= 40; i++) {
 
   let startY = 400 - 20 * i;
 
-  if(startY === 0) {
+  if (startY === 0) {
     color = 'green';
   } else {
     color = 'red';
   }
 
-ctx.strokeStyle = color;
-ctx.beginPath();
-ctx.moveTo(0, startY);
-ctx.lineTo(600, 800 - 20 * i);
-ctx.stroke();
+  ctx.strokeStyle = color;
+  ctx.beginPath();
+  ctx.moveTo(0, startY);
+  ctx.lineTo(600, 800 - 20 * i);
+  ctx.stroke();
 }
