@@ -15,12 +15,7 @@ function drawSquare(color, size) {
   ctx.strokeRect((300 - size / 2), (200 - size / 2), size, size);
 }
 
-let red = 255;
-let green = 0;
-let blue = 0;
-let sizeStep = 10;
-
-for (let i = 0; i <= 400; i += sizeStep) {
+for (let i = 0, red = 255, green = 0, blue = 0, sizeStep = 10; i <= 400; i += sizeStep) {
 
   drawSquare(`rgb(${red}, ${green}, ${blue})`, i);
 

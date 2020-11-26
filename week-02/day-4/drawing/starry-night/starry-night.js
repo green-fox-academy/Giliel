@@ -25,4 +25,4 @@ function stars(starNum) {
 }
 
 rect(0, 0, 600, 400, 'black');
-stars(12);
+stars(6);
