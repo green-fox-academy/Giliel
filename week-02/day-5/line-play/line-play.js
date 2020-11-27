@@ -4,6 +4,7 @@
 const canvas = document.querySelector('.canvas');
 const ctx = canvas.getContext('2d');
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
+
 function drawLine(startX, startY, lineToX, lineToY, color) {
   ctx.strokeStyle = color;
   ctx.beginPath();
@@ -12,13 +13,9 @@ function drawLine(startX, startY, lineToX, lineToY, color) {
   ctx.stroke();
 }
 
-let lineCount = 14;
-
-for (let i = 0; i <= lineCount; i++) {
-
+for (let i = 0, lineCount = 14; i <= lineCount; i++) {
   let startY = (i * canvas.height / (lineCount + 2)) + ((canvas.height / lineCount) * 2);
   let lineToX = (i * canvas.width / (lineCount + 1)) + (canvas.width / lineCount);
-
   let startX = (i * canvas.width / (lineCount + 2)) + ((canvas.width / lineCount) * 2);
   let lineToY = (i * canvas.height / (lineCount + 1)) + (canvas.height / lineCount);
 
