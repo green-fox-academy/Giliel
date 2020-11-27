@@ -6,7 +6,7 @@
 
 let numbers: number[] = [1, 2, 3, 8, 5, 6];
 
-let newNumbers: number[] = numbers.map(function(value: number, index: number): number {
+let newNumbers: number[] = numbers.map(function(value: number): number {
   if (value === 8) {
     return 4;
   }
