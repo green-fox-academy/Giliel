@@ -20,9 +20,9 @@ function stars(starNum) {
 
   for (let i = 0; i < starNum; i++) {
 
-    rect((590 * Math.random()), (390 * Math.random()), 10, 10, (`rgba(255, 255, 255, ${0.4 + Math.random()})`));
+    rect((590 * Math.random()), (390 * Math.random()), 2, 2, (`rgba(255, 255, 255, ${0.4 + Math.random()})`));
   }
 }
 
 rect(0, 0, 600, 400, 'black');
-stars(6);
+stars(1000);
