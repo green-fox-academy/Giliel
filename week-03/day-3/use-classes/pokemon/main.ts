@@ -1,3 +1,4 @@
+'use strict';
 import { Pokemon } from './Pokemon'
 
 let pokemonOfAsh: Pokemon[] = initializePokemon();
@@ -22,12 +23,12 @@ let wildPokemon: Pokemon = new Pokemon('Oddish', 'grass', 'water');
 // Which pokemon should Ash use?
 function chooseEffective(pokemonOfAsh: Pokemon[], wildPokemon: Pokemon) {
 
-  // find which pokemon effecteve against the wild pokemon
+  // find which pokemon effective against the wild pokemon (best choice)
   for (let i: number = 0; i < pokemonOfAsh.length; i++) {
     if (pokemonOfAsh[i].isEffectiveAgainst(wildPokemon)) {
       return pokemonOfAsh[i].name;
 
-    // find the pokemon which is NOT the same type as the wild pokemon
+    // find the pokemon which is NOT the same type as the wild pokemon (2nd best choice)
     } else if ((i === (pokemonOfAsh.length - 1))) {
 
       for (let j: number = 0; j < pokemonOfAsh.length; j++) {

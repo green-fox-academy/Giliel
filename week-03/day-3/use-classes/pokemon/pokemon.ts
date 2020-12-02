@@ -1,3 +1,4 @@
+'use strict';
 export class Pokemon {
   name: string;
   type: string;
