@@ -9,8 +9,8 @@ let pokemonOfAsh: Pokemon[] = initializePokemon();
 // Ash has a few pokemon.
 function initializePokemon(): Pokemon[] {
   return [
+    new Pokemon('Pikachu', 'electric', 'water'),
     new Pokemon('Bulbasaur', 'grass', 'water'),
-    new Pokemon('Pikatchu', 'electric', 'water'),
     new Pokemon('Charizard', 'fire', 'grass'),
     new Pokemon('Squirtle', 'water', 'fire'),
     new Pokemon('Kingler', 'water', 'fire')
@@ -49,4 +49,8 @@ function chooseEffective(arrayOfPokemons: Pokemon[], otherPokemon: Pokemon) {
 }
 
 // Implement the following `chooseEffective` function which will choose the most effective pokemon for Ash
+if (pokemonOfAsh[0]) {
 console.log(`I choose you, ${chooseEffective(pokemonOfAsh, wildPokemon)}!`);
+} else {
+  console.log('I left my pokeballs at home!');
+}

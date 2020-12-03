@@ -2,7 +2,7 @@
 export class Pokemon {
   name: string;
   type: string;
-  effectiveAgainst: string;
+    effectiveAgainst: string;
 
   constructor(name: string, type: string, effectiveAgainst: string) {
       this.name = name;
