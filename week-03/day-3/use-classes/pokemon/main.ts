@@ -21,26 +21,31 @@ function initializePokemon(): Pokemon[] {
 let wildPokemon: Pokemon = new Pokemon('Oddish', 'grass', 'water');
 
 // Which pokemon should Ash use?
-function chooseEffective(pokemonOfAsh: Pokemon[], wildPokemon: Pokemon) {
+function chooseEffective(arrayOfPokemons: Pokemon[], otherPokemon: Pokemon) {
 
-  // find which pokemon effective against the wild pokemon (best choice)
-  for (let i: number = 0; i < pokemonOfAsh.length; i++) {
-    if (pokemonOfAsh[i].isEffectiveAgainst(wildPokemon)) {
-      return pokemonOfAsh[i].name;
-
-    // find the pokemon which is NOT the same type as the wild pokemon (2nd best choice)
-    } else if ((i === (pokemonOfAsh.length - 1))) {
-
-      for (let j: number = 0; j < pokemonOfAsh.length; j++) {
-        if (!pokemonOfAsh[j].isTypeMatch(wildPokemon)) {
-          return pokemonOfAsh[j].name;
-
-        } else if (j === (pokemonOfAsh.length - 1)) {
-          return pokemonOfAsh[0].name;
-        }
-      }
+  // find that pokemon effective against the other pokemon AND the other pokemon not effective against it (best choice)
+  for (let i: number = 0; i < arrayOfPokemons.length; i++) {
+    if (arrayOfPokemons[i].isEffectiveAgainst(otherPokemon) && !otherPokemon.isEffectiveAgainst(arrayOfPokemons[i])) {
+      return arrayOfPokemons[i].name;
     }
   }
+
+  // find that pokemon the other pokemon not effective against
+  for (let i: number = 0; i < arrayOfPokemons.length; i++) {
+    if (!otherPokemon.isEffectiveAgainst(arrayOfPokemons[i])) {
+      return arrayOfPokemons[i].name;
+    }
+  }
+
+  // the other pokemon effective against all pokemons in the array
+  // find that pokemon effective against the other pokemon
+  for (let i: number = 0; i < arrayOfPokemons.length; i++) {
+    if (arrayOfPokemons[i].isEffectiveAgainst(otherPokemon)) {
+      return arrayOfPokemons[i].name;
+    }
+  }
+
+  return arrayOfPokemons[0].name;
 }
 
 // Implement the following `chooseEffective` function which will choose the most effective pokemon for Ash
