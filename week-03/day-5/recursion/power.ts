@@ -1,6 +1,6 @@
 'use strict';
 
-function powerN(base: number, n: number) {
+function powerN(base: number, n: number): number {
   if (n === 0) {
     return 1;
   }
