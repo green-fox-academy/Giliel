@@ -13,8 +13,8 @@ class Counter {
    this._number += number ?? 1;
   }
 
-  public get(): string {
-    return `${this._number}`;
+  public get(): number {
+    return this._number;
   }
   public reset(): void {
     this._number = this._initialNumber;
