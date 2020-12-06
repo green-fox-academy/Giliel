@@ -1,5 +1,5 @@
 'use strict';
-import { Pokemon } from './Pokemon'
+import { Pokemon } from './Pokemon';
 
 let pokemonOfAsh: Pokemon[] = initializePokemon();
 
