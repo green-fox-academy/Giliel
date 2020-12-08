@@ -1,5 +1,7 @@
-# node files, directory
+# node files
 package-lock.json
+
+# node directory
 node_modules
 
 # Logs
