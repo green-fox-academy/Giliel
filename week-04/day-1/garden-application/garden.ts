@@ -3,25 +3,26 @@
 import { Plant } from './Plant';
 
 export class Garden {
-  protected _plantsOfGarden: Plant[];
-
-  constructor(plantsOfGarden: Plant[]) {
-    this._plantsOfGarden = plantsOfGarden;
-  }
+  protected _plantsOfGarden: Plant[] = [];
 
   public gardenWatering(waterAmount: number): void {
     console.log(`Watering with ${waterAmount}`);
     let needsWater: Plant[] = this._plantsOfGarden.filter(plant => (plant.isNeedsWater() === true));
     needsWater.map(plant => plant.watering(waterAmount / needsWater.length));
-    this.get();
+    this.gardenStatus();
   }
 
-  public get(): void {
-    this._plantsOfGarden.forEach(plant => plant.plantInfo(plant));
+  public gardenStatus(): void {
+    this._plantsOfGarden.forEach((plant: Plant) => plant.plantStatus(plant));
     console.log('\n');
   }
 
-  public addPlant(name: any, color: string): void {
-    this._plantsOfGarden.push(...[new name(color)]);
+  public addPlant(plantType: any, color: string): void {
+    this._plantsOfGarden.push(...[new plantType(color)]);
   }
+
+  /*  // Add a plant as an object
+   public addPlant(newPlant: Plant): void {
+     this._plantsOfGarden.push(newPlant);
+   } */
 }

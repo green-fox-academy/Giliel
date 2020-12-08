@@ -1,34 +1,26 @@
 'use strict';
 
 export class Plant {
-  protected _name: string;
+  protected _plantType: string;
   protected _color: string;
   protected _waterAmount: number;
   protected _needsWaterLimit: number;
   protected _wateringEffectivness: number;
 
-  constructor(color: string) {
-    this._name = 'Plant';
+  constructor(plantType: string, color: string, needsWaterLimit: number, wateringEffectivness: number) {
+    this._plantType = plantType;
     this._color = color;
     this._waterAmount = 0;
-    this._needsWaterLimit = 0;
-    this._wateringEffectivness = 0;
+    this._needsWaterLimit = needsWaterLimit;
+    this._wateringEffectivness = wateringEffectivness;
   }
 
   public isNeedsWater(): boolean {
-    if (this._waterAmount < this._needsWaterLimit) {
-      return true;
-    }
-    return false;
+    return this._waterAmount < this._needsWaterLimit;
   }
 
-  public plantInfo(plant: Plant): void {
-
-    if (plant.isNeedsWater() === true) {
-      console.log(`The ${this._color} ${this._name} needs water.`);
-    } else {
-      console.log(`The ${this._color} ${this._name} doesn't needs water.`);
-    }
+  public plantStatus(plant: Plant): void {
+    console.log(`The ${this._color} ${this._plantType} ${(plant.isNeedsWater() === true) ? 'needs' : 'doesn\'t needs'} water.`);
   }
 
   public watering(water: number): void {
