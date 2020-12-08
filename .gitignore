@@ -1,3 +1,6 @@
+# node files
+package-lock.json
+
 # Logs
 logs
 *.log
