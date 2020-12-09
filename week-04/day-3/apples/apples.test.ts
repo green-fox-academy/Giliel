@@ -11,4 +11,4 @@ test('get string', t => {
 
   t.equal(actual, expected);
   t.end();
-})
+});
