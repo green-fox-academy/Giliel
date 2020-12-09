@@ -4,10 +4,10 @@ import * as test from 'tape';
 import { Apple } from './apples';
 
 test('get string', t => {
-  const fruit = new Apple();
+  const fruit: Apple = new Apple();
 
-  let actual = fruit.getApple();
-  let expected = 'apples';
+  let actual: string = fruit.getApple();
+  let expected: string = 'apples';
 
   t.equal(actual, expected);
   t.end();
