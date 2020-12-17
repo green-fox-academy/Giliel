@@ -5,10 +5,7 @@
 // -  Log the sum of the elements of `numbers` to the console
 
 let numbers: number[] = [3, 4, 5, 6, 7];
-let sum: number = 0;
 
-numbers.forEach(function(value: number): number {
-  return sum += value;
-});
-
-console.log(sum);
+console.log(numbers.reduce(function(numCollector: number, currentNumber: number): number {
+  return numCollector + currentNumber;
+}));
