@@ -9,7 +9,7 @@ test('Test1: two words, are anagrams', t => {
 
   t.equal(actual, expected);
   t.end();
-})
+});
 
 test('Test2: two texts with 2 and 3 spaces, are anagrams', t => {
   let actual: boolean = isAnagram('egy értékre ments', 'két egér sem nyert');
@@ -17,7 +17,7 @@ test('Test2: two texts with 2 and 3 spaces, are anagrams', t => {
 
   t.equal(actual, expected);
   t.end();
-})
+});
 
 test('Test3: two texts, are not anagrams', t => {
   let actual: boolean = isAnagram('róka', 'paróka');
@@ -25,7 +25,7 @@ test('Test3: two texts, are not anagrams', t => {
 
   t.equal(actual, expected);
   t.end();
-})
+});
 
 test('Test4: same texts, are not anagrams', t => {
   let actual: boolean = isAnagram('róka', 'róka');
@@ -33,4 +33,4 @@ test('Test4: same texts, are not anagrams', t => {
 
   t.equal(actual, expected);
   t.end();
-})
+});

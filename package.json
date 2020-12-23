@@ -1,0 +1,23 @@
+{
+  "name": "Giliel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/green-fox-academy/Giliel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/green-fox-academy/Giliel/issues"
+  },
+  "homepage": "https://github.com/green-fox-academy/Giliel#readme",
+  "dependencies": {
+    "@types/node": "^14.14.14"
+  }
+}

@@ -1,5 +1,5 @@
 'use strict';
-import fs from 'fs';
+import * as fs from 'fs';
 
 // Write a function that takes a filename as string,
 // then returns the number of lines the file contains.

@@ -12,7 +12,7 @@ export class Person {
   }
 
   public specificIntroduction(): string {
-    return ``;
+    return '';
   }
 
   public introduce(): void {
