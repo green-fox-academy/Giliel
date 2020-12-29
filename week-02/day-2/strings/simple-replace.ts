@@ -11,5 +11,3 @@ let oldWord: RegExp = /dishwasher/;
 example = example.replace(oldWord, 'galaxy');
 
 console.log(example);
-
-export = example;
