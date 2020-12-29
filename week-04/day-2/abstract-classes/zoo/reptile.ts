@@ -4,11 +4,11 @@ import { Animal } from './animal';
 
 export class Reptile extends Animal {
 
-    constructor(name: string, gender?: string) {
-        super(name, gender);
-    }
+  constructor(name: string, gender?: string) {
+    super(name, gender);
+  }
 
-    public breed(): string {
-        return `laying eggs.`;
-    }
+  public breed(): string {
+    return `laying eggs.`;
+  }
 }
