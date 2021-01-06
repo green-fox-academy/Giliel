@@ -1,12 +1,12 @@
 'use strict';
 
 const king = document.getElementById('b325');
-console.log(king.innerHTML);
+console.log('king', king);
 
 const businessLamp = document.getElementsByClassName('big');
 
 for (let i = 0; i < businessLamp.length; i++) {
-  console.log(businessLamp[i].innerHTML);
+  console.log(businessLamp[i].innerHTML, businessLamp[i]);
 }
 
 const conceitedKing = document.querySelectorAll('.container');
