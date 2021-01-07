@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 const todos = ['get up', 'survive', 'go back to bed'];
 
 app.get('/', (req, res) => {
-  res.render('todos', { todos: todos })
-})
+  res.render('todos', { todos: todos });
+});
 
 app.listen(3000);
