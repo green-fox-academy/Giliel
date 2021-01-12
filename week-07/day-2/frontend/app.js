@@ -2,9 +2,10 @@
 
 const express = require('express');
 const path = require('path');
-
+const bodyParser = require('body-parser');
 const app = express();
 
+app.use(bodyParser.json());
 app.use(express.static('assets'));
 
 app.get('/', (req, res) => {
@@ -46,8 +47,28 @@ app.get('/appenda', (req, res) => {
   res.sendStatus(404);
 });
 
+app.post('/dountil/:action', (req, res) => {
+  let action = req.params.action;
+  let until = req.body.until;
 
+  if (until === undefined) {
+    res.json({ error: 'Please provide a number!' });
+  } else {
+    let result = 0;
 
-
+    if (action === 'sum') {
+      for (let i = 0; i <= until; i++) {
+        result += i;
+      }
+    }
+    if (action === 'factor') {
+      result = until;
+      for (let i = until - 1; i > 0; i--) {
+        result *= i;
+      }
+    }
+    res.json({ result: result });
+  }
+});
 
 app.listen(3000);
