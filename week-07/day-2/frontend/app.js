@@ -35,12 +35,16 @@ app.get('/greeter', (req, res) => {
   } else {
     res.json({ welcome_message: `Oh, hi there ${name}, my dear ${title}!` });
   }
-
 });
 
+app.get('/appenda/:appendable', (req, res) => {
+  let appended = req.params.appendable + 'a';
+  res.json({ appended: `${appended}` });
+});
 
-
-
+app.get('/appenda', (req, res) => {
+  res.sendStatus(404);
+});
 
 
 
