@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel='stylesheet' href='style.css'>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+
+  <form>
+
+    <h1>account login</h1>
+
+    <label for='username'>username
+      <input type='text' name='username' id='username' required>
+    </label>
+
+    <label for='password'>password
+      <div class='password'>
+        <input type='password' name='password' id='password' required>
+        <i class="far fa-eye" id='togglePassword'></i>
+      </div>
+    </label>
+
+    <p>Forgot Password?</p>
+
+    <button type='submit'>Login</button>
+
+  </form>
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>
