@@ -6,7 +6,7 @@ app.get('/groot', (req, res) => {
   let message = req.query.message;
 
   if (message === undefined) {
-    res.json({ 'error': 'I am Groot!' });
+    res.status(400).json({ 'error': 'I am Groot!' });
   } else {
     res.json({ 'received': message, 'translated': 'I am Groot!' });
   }
