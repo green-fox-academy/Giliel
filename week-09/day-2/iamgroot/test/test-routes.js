@@ -4,7 +4,7 @@ const test = require('tape');
 const request = require('supertest');
 const app = require('../routes');
 
-test('groot endpoint', (t) => {
+test('groot endpoint with parameter', (t) => {
   // TODO: implement it
   request(app)
     .get('/groot?message=message')
@@ -19,7 +19,7 @@ test('groot endpoint', (t) => {
     });
 });
 
-test('groot endpoint', (t) => {
+test('groot endpoint without parameter', (t) => {
   // TODO: implement it
   request(app)
     .get('/groot')
