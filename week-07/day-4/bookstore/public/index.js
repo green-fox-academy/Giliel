@@ -29,13 +29,12 @@ function addTitleToList(title) {
   titleList.appendChild(row);
 }
 
-function loadBooks() {
+function loadBooks(endpoint) {
 
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = handleReadyStateChange;
 
   let method = 'GET';
-  let endpoint = '/book';
   xhr.open(method, endpoint);
   xhr.send();
 
@@ -55,6 +54,8 @@ const bookList = document.querySelector('table');
 
 function addBookToList(book) {
   const tr = document.createElement('tr');
+  tr.setAttribute('class', 'book');
+
   const tdTitle = document.createElement('td');
   const tdAuthor = document.createElement('td');
   const tdCategory = document.createElement('td');

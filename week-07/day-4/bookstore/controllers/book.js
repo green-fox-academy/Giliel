@@ -1,6 +1,5 @@
 'use strict';
 
-const { AssertionError } = require('assert');
 const express = require('express');
 const router = express.Router();
 const conn = require('./db');
@@ -9,21 +8,21 @@ router.get('/book', (req, res) => {
   let category = '%';
   let publisher = '%';
   let pgt = 0;
-  let plt = '1000000';
+  let plt = 1000000;
 
-  if (req.query.category !== undefined) {
+  if (req.query.category) {
     category = req.query.category;
   }
 
-  if (req.query.publisher !== undefined) {
+  if (req.query.publisher) {
     publisher = req.query.publisher;
   }
 
-  if (req.query.pgt !== undefined) {
+  if (req.query.pgt) {
     pgt = req.query.pgt;
   }
 
-  if (req.query.plt !== undefined) {
+  if (req.query.plt) {
     plt = req.query.plt;
   }
 
@@ -45,8 +44,6 @@ router.get('/book', (req, res) => {
       }
       res.json(rows);
     });
-
-
 });
 
 module.exports = router;
