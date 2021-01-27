@@ -1,0 +1,67 @@
+body {
+  height: 95vh;
+  display: flex;
+  background: #2f3060;
+}
+
+.container {
+  display: block;
+  margin: auto;
+}
+
+div {
+  display: flex;
+  width: 80vw;
+  max-width: 1000px;
+  justify-content: space-evenly;
+}
+
+button {
+  width: 180px;
+  height: 70px;
+  border: none;
+  border-radius: 8px;
+  margin: 4vh 3vw;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 20px;
+}
+
+.button--blue{
+  box-shadow: inset 0px 3px 0px rgba(255, 255, 255, 0.2), 0px 5px 0px 1px rgba(59, 96, 176, 0.6), 0px 10px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgb(59, 96, 176);
+  }
+
+.button--green{
+  box-shadow: inset 0px 3px 0px rgba(255, 255, 255, 0.2), 0px 5px 0px 1px rgba(22, 158, 77, 0.6), 0px 10px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgb(22, 158, 77);
+  }
+
+.button--red {
+  box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3), 0px 5px 0px 1px rgba(236, 55, 34, 0.6), 0px 10px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgb(236, 55, 34);
+}
+
+.button--light{
+  box-shadow: inset 0px 3px 0px rgba(255, 255, 255, 0.2), 0px 5px 0px 1px rgba(1, 164, 235, 0.6), 0px 10px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgb(1, 164, 235);
+  }
+
+.button--black{
+  box-shadow: inset 0px 3px 0px rgba(255, 255, 255, 0.2), 0px 5px 0px 1px rgba(34, 34, 34, 0.6), 0px 10px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgb(34, 34, 34);
+  }
+
+.button--white {
+  box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3), 0px 5px 0px 1px rgba(240, 240, 250, 0.6), 0px 10px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgb(240, 240, 250);
+  color: rgba(105, 96, 123, 0.7);
+}
+
+button:hover {
+filter: brightness(110%);
+}
+
+button:active {
+  filter: brightness(90%);
+}
