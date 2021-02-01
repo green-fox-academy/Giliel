@@ -27,12 +27,12 @@ CREATE TABLE `posts` (
   `title` varchar(256) DEFAULT NULL,
   `url` varchar(256) DEFAULT NULL,
   `timestamp` timestamp NOT NULL,
-  `score` int DEFAULT NULL,
+  `score` int DEFAULT '0',
   `username` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`post_id`),
   KEY `fk_username` (`username`),
   CONSTRAINT `fk_username` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +41,7 @@ CREATE TABLE `posts` (
 
 LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
+INSERT INTO `posts` VALUES (1,'Dear JavaScript','http://9gag.com','2021-02-02 15:13:10',791,NULL),(2,'Crockford','http://9gag.com','2021-02-01 15:13:20',567,NULL),(3,'Crockford','http://9gag.com','2021-02-01 16:18:39',NULL,NULL),(4,'Crockford','http://9gag.com','2021-02-01 16:28:47',NULL,NULL),(5,'Crockford','http://9gag.com','2021-02-01 16:29:28',NULL,NULL),(6,'Crockford','http://9gag.com','2021-02-01 16:32:58',NULL,NULL),(7,'Crockford','http://9gag.com','2021-02-01 16:39:11',NULL,NULL),(8,'Eight','http://9gag.com','2021-02-01 16:39:36',NULL,NULL),(9,'Eight','http://9gag.com','2021-02-01 16:58:13',NULL,NULL),(10,'Eight','http://9gag.com','2021-02-01 17:21:12',0,NULL),(11,'Eight','http://9gag.com','2021-02-01 18:09:44',0,NULL);
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-01 15:22:30
+-- Dump completed on 2021-02-01 19:13:35
