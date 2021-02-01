@@ -34,17 +34,53 @@ router.post('/posts', (req, res) => {
             res.status(500).json(err);
             return;
           }
-          res.json(rows);
+          res.status(200).json(rows);
         });
     });
 });
 
+router.post('/posts/:id/upvote', (req, res) => {
+  const postId = req.params.id;
 
+  conn.query(`UPDATE posts SET score = score + 1 WHERE post_id = ?;`, [postId],
+    (err, rows) => {
+      if (err) {
+        console.log(err.toString());
+        res.status(500).json(err);
+        return;
+      }
+      conn.query(`SELECT * FROM posts WHERE post_id = ${postId};`,
+        (err, rows) => {
+          if (err) {
+            console.log(err.toString());
+            res.status(500).json(err);
+            return;
+          }
+          res.status(200).json(rows);
+        });
+    });
+});
 
+router.post('/posts/:id/downvote', (req, res) => {
+  const postId = req.params.id;
 
-
-
-
-
+  conn.query(`UPDATE posts SET score = score - 1 WHERE post_id = ?;`, [postId],
+    (err, rows) => {
+      if (err) {
+        console.log(err.toString());
+        res.status(500).json(err);
+        return;
+      }
+      conn.query(`SELECT * FROM posts WHERE post_id = ${postId};`,
+        (err, rows) => {
+          if (err) {
+            console.log(err.toString());
+            res.status(500).json(err);
+            return;
+          }
+          res.status(200).json(rows);
+        });
+    });
+});
 
 module.exports = router;
