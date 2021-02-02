@@ -5,7 +5,7 @@ const router = express.Router();
 const conn = require('./db');
 
 router.get('/posts', (req, res) => {
-  conn.query('SELECT * FROM posts;', (err, rows) => {
+  conn.query('SELECT * FROM posts ORDER BY timestamp DESC;', (err, rows) => {
     if (err) {
       console.log(err.toString());
       res.status(500).json({ error: 'Database error' });
