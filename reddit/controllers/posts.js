@@ -39,7 +39,7 @@ router.post('/posts', (req, res) => {
     });
 });
 
-router.post('/posts/:id/upvote', (req, res) => {
+router.put('/posts/:id/upvote', (req, res) => {
   const postId = req.params.id;
 
   conn.query(`UPDATE posts SET score = score + 1 WHERE post_id = ?;`, [postId],
@@ -61,7 +61,7 @@ router.post('/posts/:id/upvote', (req, res) => {
     });
 });
 
-router.post('/posts/:id/downvote', (req, res) => {
+router.put('/posts/:id/downvote', (req, res) => {
   const postId = req.params.id;
 
   conn.query(`UPDATE posts SET score = score - 1 WHERE post_id = ?;`, [postId],
