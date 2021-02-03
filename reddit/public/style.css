@@ -27,10 +27,13 @@ nav {
   letter-spacing: .8em;
 }
 
-#pageicon {
-  rotate: 20deg;
+#pageiconLink {
   align-self: center;
   position: absolute;
+}
+
+#pageicon {
+  rotate: 20deg;
   width: 8vw;
   min-width: 60px;
   margin-left: 8vh;

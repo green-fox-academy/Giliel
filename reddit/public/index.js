@@ -25,7 +25,7 @@ function getPosts() {
 }
 
 function loadNewPost(postDatas) {
-  console.log(postDatas.timestamp);
+  let elapsedTime = countElapsedTime(postDatas.timestamp);
 
   const postCard = document.createElement('div');
   postCard.setAttribute('id', postDatas.post_id);
@@ -61,7 +61,7 @@ function loadNewPost(postDatas) {
 
   const postSubmitted = document.createElement('p');
   postSubmitted.setAttribute('class', 'postSubmitted');
-  postSubmitted.innerHTML = `submitted ${postDatas.timestamp} ago`;
+  postSubmitted.innerHTML = `submitted ${elapsedTime} minutes ago`;
   post.appendChild(postSubmitted);
 
   const postLinkModify = document.createElement('a');
@@ -77,15 +77,13 @@ function loadNewPost(postDatas) {
   post.appendChild(postLinkRemove);
 }
 
+function countElapsedTime(timestamp) {
+  let postDate = new Date(timestamp);
+  let postDateValue = postDate.valueOf();
 
+  let actualDateValue = Date.now();
 
+  let elapsedTime = Math.floor((actualDateValue - postDateValue) / 1000 / 60);
 
-
-
-
-
-
-
-
-
-
+  return `${elapsedTime}`;
+}
