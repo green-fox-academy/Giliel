@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap">
+  <title>Post to Reddit Space</title>
+</head>
+
+<body>
+  <nav>
+    <a id='pageiconLink' href='./index.html'><img id='pageicon' src='./assets/redditIcon-space.png'
+        alt='reddit-icon-space'></a>
+    <h1 id='pagename'>space</h1>
+    <h2 id='pagesubtitle'>post to /r/space</h2>
+  </nav>
+
+  <div class='container'>
+    <main>
+      <form>
+        <div class='card'>
+
+          <label for='title'>title
+            <textarea class='postTitleLink' name='title' rows='2' id='title' required></textarea>
+          </label>
+
+          <label for='url'>URL
+            <input type='url' name='url' id='url' required>
+          </label>
+        </div>
+
+        <button type='submit' class='btn formbtn'>submit</button>
+      </form>
+    </main>
+
+    <aside></aside>
+  </div>
+</body>
+
+</html>

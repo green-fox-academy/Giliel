@@ -34,7 +34,7 @@ function loadNewPost(postDatas) {
 
   const postCard = document.createElement('div');
   postCard.setAttribute('id', postDatas.post_id);
-  postCard.setAttribute('class', 'postCard');
+  postCard.setAttribute('class', 'card postCard');
   posts.appendChild(postCard);
 
   const postVote = document.createElement('div');
@@ -66,7 +66,7 @@ function loadNewPost(postDatas) {
 
   const postSubmitted = document.createElement('p');
   postSubmitted.setAttribute('class', 'postSubmitted');
-  postSubmitted.innerHTML = `submitted ${elapsedTime} ago by ${username}`;
+  postSubmitted.innerHTML = `submitted ${elapsedTime} ago by <font class='postUsername'>${username}</font>`;
   post.appendChild(postSubmitted);
 
   const postLinkModify = document.createElement('a');

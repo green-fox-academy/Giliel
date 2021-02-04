@@ -4,6 +4,7 @@
   font-family: 'Lato', sans-serif;
   font-size: 14px;
 }
+
 body {
   background-color: #ebebeb;
 }
@@ -27,6 +28,21 @@ nav {
   letter-spacing: .8em;
 }
 
+#pagesubtitle {
+  align-self: center;
+  position: absolute;
+  padding-top: 16vh;
+  margin: auto;
+  left: 0;
+  right: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
 #pageiconLink {
   align-self: center;
   position: absolute;
@@ -40,16 +56,33 @@ nav {
 }
 
 .container {
+  justify-content: center;
   display: flex;
   margin: 24px auto;
 }
 
-.postCard {
-  display: flex;
+.card {
   width: 70vw;
   padding: 12px;
   margin: 0 12px 6px;
   background-color: white;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  padding: 12px;
+  margin-bottom: 12px;
+  color: white;
+  background-color: #4aa3df;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+.postCard {
+  display: flex;
 }
 
 .postVote {
@@ -105,6 +138,25 @@ nav {
   color: #bbb;
 } */
 
+.postSubmitted {
+  padding-top: .5em;
+  color: #666;
+}
+
+.postUsername {
+  color: #2980b9;
+}
+
+.postLink {
+  padding-right: 1em;
+  color: #666;
+  text-decoration: none;
+}
+
+.postLink:disabled {
+  color: #bbb;
+}
+
 aside {
   width: 30vw;
   max-width: 400px;
@@ -115,19 +167,6 @@ aside {
 .asideBlock {
   padding: 12px 12px 16px;
   background-color: #f5f5f5;
-}
-
-.btn {
-  width: 100%;
-  border: none;
-  padding: 12px;
-  margin-bottom: 12px;
-  color: white;
-  background-color: #4aa3df;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .2em;
 }
 
 .about {
@@ -153,4 +192,32 @@ li {
   line-height: 20px;
   text-align: left;
   list-style-type: square;
+}
+
+label {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+input, textarea {
+  display: block;
+  margin-top: 4px;
+  width: 69vw;
+  padding: 4px;
+  border: 1px solid #ebebeb;
+  background-color: #f5f5f5;
+}
+
+textarea {
+  margin-bottom: 16px;;
+}
+
+#url {
+  font-size: 18px;
+}
+
+.formbtn {
+  width: 35vw;
+  margin: 12px;
 }
