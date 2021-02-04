@@ -64,7 +64,7 @@ nav {
 .upvote, .upvoted, .downvote, .downvoted {
   cursor: pointer;
   display: block;
-  width: 16px;
+  width: 15px;
   height: 14px;
 }
 
