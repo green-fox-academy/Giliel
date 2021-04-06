@@ -17,12 +17,7 @@ export class Garden {
     console.log('\n');
   }
 
-  public addPlant(plantType: any, color: string): void {
-    this._plantsOfGarden.push(...[new plantType(color)]);
-  }
-
-  /*  // Add a plant as an object
    public addPlant(newPlant: Plant): void {
      this._plantsOfGarden.push(newPlant);
-   } */
+   }
 }
